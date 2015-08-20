@@ -1,0 +1,58 @@
+
+;; Function printf (<unset-asm-name>, funcdef_no=15, decl_uid=758, cgraph_uid=15)
+
+
+Analyzing function body size: printf
+
+Inline summary for printf/15 always_inline inlinable
+  self time:       15
+  global time:     0
+  self size:       7
+  global size:     0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000, predicate:(true)
+    size:3.000000, time:2.000000, predicate:(not inlined)
+  calls:
+    __printf_chk/25 function body not available
+      loop depth: 0 freq:1000 size: 4 time: 13 callee size: 0 stack: 0
+
+printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2>:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=24, decl_uid=2381, cgraph_uid=24) (executed once)
+
+
+Analyzing function body size: main
+
+Inline summary for main/24 inlinable
+  self time:       15
+  global time:     0
+  self size:       7
+  global size:     0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000, predicate:(true)
+    size:3.000000, time:2.000000, predicate:(not inlined)
+  calls:
+    __printf_chk/25 function body not available
+      loop depth: 0 freq:1000 size: 4 time: 13 callee size: 0 stack: 0
+
+main ()
+{
+  <bb 2>:
+  __printf_chk (1, "i : %d\n", 4);
+  return 0;
+
+}
+
+

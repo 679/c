@@ -1,0 +1,6 @@
+20 ssa "unused VAR_DECLs removed" "main" 1
+26 ccp "Constants propagated" "main" 2
+26 ccp "Statements deleted" "main" 7
+41 release_ssa "unused VAR_DECLs removed" "main" 3
+41 release_ssa "SSA names released" "main" 8
+41 release_ssa "SSA name holes removed" "main" 8

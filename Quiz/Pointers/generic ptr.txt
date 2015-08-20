@@ -1,0 +1,6 @@
+Which of the below points are true about Generic pointers ?
+
+A. Generic pointer can hold any type of pointers with typecasting.
+B. Any type of pointer can hold generic pointer without any typecasting and vice versa.
+C. Return type of malloc function is generic pointer
+D. Generic pointer can hold any type of pointers without typecasting.

@@ -1,0 +1,72 @@
+
+;; Function printf (<unset-asm-name>, funcdef_no=15, decl_uid=758, cgraph_uid=15)
+
+
+
+ local analysis of printf
+   scanning: _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  scanning: return _4;
+Function is locally looping.
+Function found to be nothrow: printf
+printf (const char * restrict __fmt)
+{
+  int _4;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+;;    succ:       EXIT
+
+}
+
+
+printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2>:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=24, decl_uid=2381, cgraph_uid=24) (executed once)
+
+
+
+ local analysis of main
+   scanning: __printf_chk (1, "i : %d\n", 4);
+  scanning: return 0;
+Function is locally looping.
+Function found to be nothrow: main
+main ()
+{
+  int D.2396;
+  int i;
+  int i.0;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  __printf_chk (1, "i : %d\n", 4);
+  return 0;
+;;    succ:       EXIT
+
+}
+
+
+main ()
+{
+  int D.2396;
+  int i;
+  int i.0;
+
+  <bb 2>:
+  __printf_chk (1, "i : %d\n", 4);
+  return 0;
+
+}
+
+

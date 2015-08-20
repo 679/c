@@ -1,0 +1,52 @@
+
+;; Function printf (<unset-asm-name>, funcdef_no=15, decl_uid=758, cgraph_uid=15)
+
+printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2>:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=24, decl_uid=2381, cgraph_uid=24)
+
+  Inlining printf into main (always_inline).
+Iterations: 0
+Merging blocks 2 and 4
+Merging blocks 2 and 3
+
+Symbols to be put in SSA form
+{ D.2394 D.2396 }
+Incremental SSA update started at block: 0
+Number of blocks in CFG: 3
+Number of blocks to update: 2 ( 67%)
+
+
+main ()
+{
+  int D.2396;
+  int i;
+  int i.0;
+  int _4;
+  int _8;
+  int _9;
+
+  <bb 2>:
+  i_1 = 1;
+  i.0_2 = i_1;
+  i_3 = i.0_2 + 1;
+  _4 = i.0_2 + 1;
+  i_5 = _4 * 2;
+  _9 = __printf_chk (1, "i : %d\n", i_5);
+  _11 = _9;
+  _8 = 0;
+  return _8;
+
+}
+
+

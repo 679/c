@@ -1,0 +1,7 @@
+/* gcc -o Hello Hello.c */
+
+gcc print warnings without compile
+I'd like gcc to do source code analysis for errors, but do not write any output files (similarly to what splint does). I've found this solution currently:
+gcc -Wall -c source.c > NUL
+Well, you could redirect the output to /dev/null
+gcc -o /dev/null ...

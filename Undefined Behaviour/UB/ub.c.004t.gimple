@@ -1,0 +1,27 @@
+main ()
+{
+  int i.0;
+  int D.2386;
+  int D.2387;
+  int i;
+
+  i = 1;
+  i.0 = i;
+  i = i.0 + 1;
+  D.2386 = i.0 + 1;
+  i = D.2386 * 2;
+  printf ("i : %d\n", i);
+  D.2387 = 0;
+  return D.2387;
+}
+
+
+printf (const char * restrict __fmt)
+{
+  int D.2389;
+
+  D.2389 = __printf_chk (1, __fmt, __builtin_va_arg_pack ());
+  return D.2389;
+}
+
+

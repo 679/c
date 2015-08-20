@@ -1,0 +1,28 @@
+
+;; Function printf (<unset-asm-name>, funcdef_no=15, decl_uid=758, cgraph_uid=15)
+
+Released 0 names, 0.00%, removed 0 holes
+printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2>:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=24, decl_uid=2381, cgraph_uid=24) (executed once)
+
+Released 8 names, 200.00%, removed 8 holes
+main ()
+{
+  <bb 2>:
+  __printf_chk (1, "i : %d\n", 4);
+  return 0;
+
+}
+
+

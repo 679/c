@@ -1,0 +1,37 @@
+
+;; Function printf (<unset-asm-name>, funcdef_no=15, decl_uid=758, cgraph_uid=15)
+
+printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2>:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=24, decl_uid=2381, cgraph_uid=24)
+
+main ()
+{
+  int i;
+  int i.0;
+  int _4;
+  int _8;
+
+  <bb 2>:
+  i_1 = 1;
+  i.0_2 = i_1;
+  i_3 = i.0_2 + 1;
+  _4 = i.0_2 + 1;
+  i_5 = _4 * 2;
+  printf ("i : %d\n", i_5);
+  _8 = 0;
+  return _8;
+
+}
+
+

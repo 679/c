@@ -1,0 +1,5 @@
+const int *ptr;
+a) You cannot change the value pointed by ptr
+b) You cannot change the pointer ptr itself
+c) Both (a) and (b)
+	d) You can change the pointer as well as the value pointed by it

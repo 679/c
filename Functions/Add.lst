@@ -1,0 +1,144 @@
+GAS LISTING /tmp/cc1DH6QD.s 			page 1
+
+
+   1              		.file	"Add.c"
+   2              		.text
+   3              	.Ltext0:
+   4              		.section	.rodata
+   5              	.LC0:
+   6 0000 456E7465 		.string	"Enter two number: "
+   6      72207477 
+   6      6F206E75 
+   6      6D626572 
+   6      3A2000
+   7              	.LC1:
+   8 0013 25642564 		.string	"%d%d"
+   8      00
+   9              		.align 4
+  10              	.LC2:
+  11 0018 54686520 		.string	"The sum of the %d and %d is %d\n"
+  11      73756D20 
+  11      6F662074 
+  11      68652025 
+  11      6420616E 
+  12              		.text
+  13              		.globl	main
+  15              	main:
+  16              	.LFB0:
+  17              		.file 1 "Add.c"
+   1:Add.c         **** #include<stdio.h>
+   2:Add.c         **** int main()
+   3:Add.c         **** {
+  18              		.loc 1 3 0
+  19              		.cfi_startproc
+  20 0000 55       		pushl	%ebp
+  21              		.cfi_def_cfa_offset 8
+  22              		.cfi_offset 5, -8
+  23 0001 89E5     		movl	%esp, %ebp
+  24              		.cfi_def_cfa_register 5
+  25 0003 83E4F0   		andl	$-16, %esp
+  26 0006 83EC20   		subl	$32, %esp
+   4:Add.c         **** 	int num2, num1,sum;
+   5:Add.c         **** 
+   6:Add.c         **** 	printf("Enter two number: ");
+  27              		.loc 1 6 0
+  28 0009 C7042400 		movl	$.LC0, (%esp)
+  28      000000
+  29 0010 E8FCFFFF 		call	printf
+  29      FF
+   7:Add.c         **** 	scanf("%d%d",&num1, &num2);
+  30              		.loc 1 7 0
+  31 0015 8D442414 		leal	20(%esp), %eax
+  32 0019 89442408 		movl	%eax, 8(%esp)
+  33 001d 8D442418 		leal	24(%esp), %eax
+  34 0021 89442404 		movl	%eax, 4(%esp)
+  35 0025 C7042413 		movl	$.LC1, (%esp)
+  35      000000
+  36 002c E8FCFFFF 		call	__isoc99_scanf
+  36      FF
+   8:Add.c         **** 
+   9:Add.c         **** 	sum = Add(num1, num2);
+GAS LISTING /tmp/cc1DH6QD.s 			page 2
+
+
+  37              		.loc 1 9 0
+  38 0031 8B542414 		movl	20(%esp), %edx
+  39 0035 8B442418 		movl	24(%esp), %eax
+  40 0039 89542404 		movl	%edx, 4(%esp)
+  41 003d 890424   		movl	%eax, (%esp)
+  42 0040 E8FCFFFF 		call	Add
+  42      FF
+  43 0045 8944241C 		movl	%eax, 28(%esp)
+  10:Add.c         **** 
+  11:Add.c         **** 	printf("The sum of the %d and %d is %d\n", num1, num2, sum);
+  44              		.loc 1 11 0
+  45 0049 8B542414 		movl	20(%esp), %edx
+  46 004d 8B442418 		movl	24(%esp), %eax
+  47 0051 8B4C241C 		movl	28(%esp), %ecx
+  48 0055 894C240C 		movl	%ecx, 12(%esp)
+  49 0059 89542408 		movl	%edx, 8(%esp)
+  50 005d 89442404 		movl	%eax, 4(%esp)
+  51 0061 C7042418 		movl	$.LC2, (%esp)
+  51      000000
+  52 0068 E8FCFFFF 		call	printf
+  52      FF
+  12:Add.c         **** 
+  13:Add.c         **** 	return 0;
+  53              		.loc 1 13 0
+  54 006d B8000000 		movl	$0, %eax
+  54      00
+  14:Add.c         **** }
+  55              		.loc 1 14 0
+  56 0072 C9       		leave
+  57              		.cfi_restore 5
+  58              		.cfi_def_cfa 4, 4
+  59 0073 C3       		ret
+  60              		.cfi_endproc
+  61              	.LFE0:
+  63              		.globl	Add
+  65              	Add:
+  66              	.LFB1:
+  15:Add.c         **** 
+  16:Add.c         **** int Add(int x,int y)
+  17:Add.c         **** {
+  67              		.loc 1 17 0
+  68              		.cfi_startproc
+  69 0074 55       		pushl	%ebp
+  70              		.cfi_def_cfa_offset 8
+  71              		.cfi_offset 5, -8
+  72 0075 89E5     		movl	%esp, %ebp
+  73              		.cfi_def_cfa_register 5
+  74 0077 83EC10   		subl	$16, %esp
+  18:Add.c         **** 	int sum;
+  19:Add.c         **** 	sum = x + y;
+  75              		.loc 1 19 0
+  76 007a 8B450C   		movl	12(%ebp), %eax
+  77 007d 8B5508   		movl	8(%ebp), %edx
+  78 0080 01D0     		addl	%edx, %eax
+  79 0082 8945FC   		movl	%eax, -4(%ebp)
+  20:Add.c         **** 	return sum;
+  80              		.loc 1 20 0
+GAS LISTING /tmp/cc1DH6QD.s 			page 3
+
+
+  81 0085 8B45FC   		movl	-4(%ebp), %eax
+  21:Add.c         **** }
+  82              		.loc 1 21 0
+  83 0088 C9       		leave
+  84              		.cfi_restore 5
+  85              		.cfi_def_cfa 4, 4
+  86 0089 C3       		ret
+  87              		.cfi_endproc
+  88              	.LFE1:
+  90              	.Letext0:
+GAS LISTING /tmp/cc1DH6QD.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Add.c
+     /tmp/cc1DH6QD.s:15     .text:0000000000000000 main
+     /tmp/cc1DH6QD.s:65     .text:0000000000000074 Add
+
+UNDEFINED SYMBOLS
+printf
+__isoc99_scanf
