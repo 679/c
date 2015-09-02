@@ -1,4 +1,7 @@
 #include<stdio.h>
+
+int Biggestnumber;
+
 int main()
 {
 	int a,b,c;

@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-float Divide(int, int);
+float Divide(int, int);/*function prototype declaration*/
 
 int main()
 {

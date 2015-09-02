@@ -13,9 +13,9 @@ main()
 	{
 		case 0: printf("Invalid marks\nPlease note the marks should be [0-100]\n");
 				break;
-		case 1: printf("D");
+		case 1: printf("D\n");
 				break;
-		case 2: printf("C");
+		case 2: printf("C\n");
 				break;
 		case 3: printf("Good Job!, You got \'B\' Grade\n");
 				break;

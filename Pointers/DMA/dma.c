@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(){
+
+int main()
+{
 	int n,i,*ptr,sum=0;
+
 	printf("Enter number of elements: ");
 	scanf("%d",&n);
-	ptr=(int*)malloc(n*sizeof(int));  //memory allocated using malloc
+
+	/* Asking for memory at the runtime */
+	ptr = (int*)malloc(n*sizeof(int));  
+
 	if(ptr==NULL)                     
 	{
 		printf("Error! memory not allocated.");
